@@ -31,6 +31,7 @@ class EntryListTableViewController: UITableViewController {
         // Configure the cell...
         let entry = EntryController.sharedInstance.entries[indexPath.row]
         cell.updateView(with: entry)
+        cell.backgroundColor = .tintColor
         return cell
     }
     

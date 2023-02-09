@@ -41,9 +41,16 @@ class EnteryDetailViewController: UIViewController {
          let address = entryAddressTextField.text,
          let body = entryBodyTextView.text else {return}
         
-        EntryController.sharedInstance.createEntry(title: title, addy: address, body: body)
-        navigationController?.popViewController(animated: true)
+        // Check to see if `entryReciver` on line 26 has a value
+        if let entry = entryReciever {
+            // if line 26 has a value, the user has selected a cell, and our segue has sent over the selected `entry`
+            EntryController.sharedInstance.updateEntry(entryToUpdate: entry, newTitle: title, newAddress: address, newBody: body)
+        } else {
+            // else, line 26 does not have a value, the user did not select a cell, the user must have selected the add entry button
+            EntryController.sharedInstance.createEntry(title: title, addy: address, body: body)
+        }
         
+        navigationController?.popViewController(animated: true)
     }
    
 } // End of class
