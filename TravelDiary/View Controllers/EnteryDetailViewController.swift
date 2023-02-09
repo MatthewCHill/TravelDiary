@@ -18,9 +18,22 @@ class EnteryDetailViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateView()
 
     }
         
+    // MARK: - Properties
+    var entryReciever: Entry?
+    
+    // MARK: - Helper Functions
+    func updateView() {
+        guard let entryReciever = entryReciever else {return}
+        entryTitleTextField.text = entryReciever.title
+        entryAddressTextField.text = entryReciever.address
+        entryBodyTextView.text = entryReciever.body
+        entryDateLabel.text = entryReciever.entryDate.stringValue()
+    }
+    
     // MARK: - Actions
 
     @IBAction func saveButtonTapped(_ sender: Any) {
