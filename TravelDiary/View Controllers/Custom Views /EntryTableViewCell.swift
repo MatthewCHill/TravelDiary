@@ -18,7 +18,7 @@ class EntryTableViewCell: UITableViewCell {
     func updateView(with entryToDisplay: Entry) {
         entryNameLabel.text = entryToDisplay.title
         entryAddressLabel.text = entryToDisplay.address
-        entryDateLabel.text = entryToDisplay.entryDate.stringValue()        
+        entryDateLabel.text = entryToDisplay.entryDate.stringValue()
     }
     
 }

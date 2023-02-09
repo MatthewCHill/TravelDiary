@@ -15,25 +15,22 @@ class EnteryDetailViewController: UIViewController {
     @IBOutlet weak var entryTitleTextField: UITextField!
     @IBOutlet weak var entryAddressTextField: UITextField!
     @IBOutlet weak var entryBodyTextView: UITextView!
-    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
         
     // MARK: - Actions
 
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let title = entryTitleTextField.text,
+         let address = entryAddressTextField.text,
+         let body = entryBodyTextView.text else {return}
+        
+        EntryController.sharedInstance.createEntry(title: title, addy: address, body: body)
+        navigationController?.popViewController(animated: true)
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+   
+} // End of class
