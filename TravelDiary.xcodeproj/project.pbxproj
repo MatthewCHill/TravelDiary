@@ -11,6 +11,7 @@
 		3413E87D29954FF600392E4A /* EnteryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3413E87C29954FF600392E4A /* EnteryDetailViewController.swift */; };
 		3413E87F2995506300392E4A /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3413E87E2995506300392E4A /* EntryTableViewCell.swift */; };
 		346FF30929955922007FA4CA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FF30829955922007FA4CA /* Entry.swift */; };
+		346FF30C29955B2A007FA4CA /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346FF30B29955B2A007FA4CA /* EntryController.swift */; };
 		413AA7F12724B792008D6631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA7F02724B792008D6631 /* AppDelegate.swift */; };
 		413AA7F32724B792008D6631 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413AA7F22724B792008D6631 /* SceneDelegate.swift */; };
 		413AA7F82724B792008D6631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413AA7F62724B792008D6631 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		3413E87C29954FF600392E4A /* EnteryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnteryDetailViewController.swift; sourceTree = "<group>"; };
 		3413E87E2995506300392E4A /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		346FF30829955922007FA4CA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		346FF30B29955B2A007FA4CA /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		413AA7ED2724B792008D6631 /* TravelDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413AA7F02724B792008D6631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413AA7F22724B792008D6631 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		346FF30D29955FD2007FA4CA /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				346FF30B29955B2A007FA4CA /* EntryController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		413AA7E42724B792008D6631 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 				413AA80427271142008D6631 /* Storyboards */,
 				3413E8802995514300392E4A /* View Controllers */,
 				346FF30A29955A90007FA4CA /* Model */,
+				346FF30D29955FD2007FA4CA /* Model Controller */,
 			);
 			path = TravelDiary;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 				3413E87D29954FF600392E4A /* EnteryDetailViewController.swift in Sources */,
 				413AA7F32724B792008D6631 /* SceneDelegate.swift in Sources */,
 				3413E87B29954F9200392E4A /* EntryListTableViewController.swift in Sources */,
+				346FF30C29955B2A007FA4CA /* EntryController.swift in Sources */,
 				413AA81527273B77008D6631 /* DateHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
