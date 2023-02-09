@@ -10,17 +10,26 @@ import Foundation
 class EntryController {
     
     // MARK: - Singleton
+    
+    /// Singleton: To ensure that we are interacting with the *SAME* instance of our *entries* array we created a singleton to pass around this specific instance of our **EntryController**
     static let sharedInstance = EntryController()
     // MARK: - Source Of Truth
+    
+    /// Source of Truth: The single location we will store our **Entry** data.
     var entries: [Entry] = []
+    
     // MARK: - CRUD FUNCTIONS
-    func createEntry(entry: String, address: String, entryDate: Date, body: String ) {
-        let newEntry = Entry(title: entry, address: address, body: body)
+    func createEntry(title: String, addy: String, body: String ) {
+        let newEntry = Entry(title: title, address: addy, body: body)
+        // Adding it to the SOT
         entries.append(newEntry)
         save()
     }
     
-    func update() {
+    func updateEntry(entryToUpdate: Entry, newTitle: String, newAddress: String, newBody: String) {
+        entryToUpdate.title = newTitle
+        entryToUpdate.address = newAddress
+        entryToUpdate.body = newBody
         save()
     }
     
